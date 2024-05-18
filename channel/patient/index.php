@@ -197,7 +197,7 @@
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <table border="0" width="100%"">
+                        <table border="0" width="100%">
                             <tr>
                                 <td width="50%">
 
@@ -214,6 +214,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
+
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
@@ -223,10 +224,12 @@
                                                                 <div class="h3-dashboard">
                                                                     All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
-                                                        </div>
+                                                           </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                                     </div>
                                                 </td>
+
+
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
@@ -240,25 +243,29 @@
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                                     </div>
                                                 </td>
+
+
                                                 </tr>
                                                 <tr>
+
+
                                                 <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
+                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display:flex;justify-content:center; ">
                                                         <div>
-                                                                <div class="h1-dashboard" >
+                                                                <div class="h1-dashboard" style="text-align: left;">
                                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard" >
-                                                                    NewBooking &nbsp;&nbsp;
+                                                                    NewBooking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                                     </div>
-                                                    
                                                 </td>
 
+
                                                 <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;">
+                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;justify-content: center;">
                                                         <div>
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $schedulerow ->num_rows  ?>

@@ -53,7 +53,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-subtitle">admin@suwa.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -75,6 +75,8 @@
                         <a href="doctors.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Doctors</p></a></div>
                     </td>
                 </tr>
+
+                
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-schedule">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
@@ -179,25 +181,27 @@
                         <table width="93%" class="sub-table scrolldown" border="0">
                         <thead>
                         <tr>
+                               
+
                                 <th class="table-headin">
-                                    
-                                
                                 Doctor Name
-                                
                                 </th>
+
                                 <th class="table-headin">
                                     Email
                                 </th>
+
                                 <th class="table-headin">
-                                    
                                     Specialties
-                                    
                                 </th>
+
                                 <th class="table-headin">
-                                    
                                     Events
-                                    
-                                </tr>
+                                </th>
+
+                                
+
+                          </tr>
                         </thead>
                         <tbody>
                         

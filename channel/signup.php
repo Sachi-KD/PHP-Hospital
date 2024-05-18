@@ -14,8 +14,7 @@
 <body>
 <?php
 
-//learn from w3schools.com
-//Unset all the server side variables
+
 
 session_start();
 
@@ -140,7 +139,15 @@ if($_POST){
 
     </div>
 </center>
-<script src="sweetalert.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

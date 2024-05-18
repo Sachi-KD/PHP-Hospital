@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="body">
-              <p class="text-xl mb-0" style="width: 18rem; ">Ms.Nishani Gunasekara</p>
+              <p class="text-xl mb-0" style="width: 18rem; ">Ms.Oshani Gunasekara</p>
               <span class="text-sm text-grey">Dentist</span>
             </div>
           </div>
