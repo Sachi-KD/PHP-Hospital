@@ -38,7 +38,7 @@ function validateForm() {
         // Check if the email was sent successfully
         if (data.success) {
           // Display success SweetAlert
-          swal('Success', 'Your message has been sent successfully!', 'success');
+          swal('Success', 'Thanks for your Feedback!', 'success');
           // Reset form fields after successful submission if needed
           document.getElementById('contact').reset();
         } else {
