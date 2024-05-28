@@ -55,13 +55,14 @@
                 </div>
                 <div class="form-group d-flex justify-content-between">
                     <a href="javascript:void()" id="login-show">Already have an Account</a>
-                    <button class="btn btn-primary btn-flat">Register</button>
+                    <button class="btn btn-primary btn-flat" style="background-color: #08dca4; border-color: #08dca4;color:black;">Register</button>
                 </div>
             </div>
         </div>
     </form>
 
 </div>
+
 <script>
     $(function(){
         $('#login-show').click(function(){

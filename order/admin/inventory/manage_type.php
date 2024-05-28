@@ -45,7 +45,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		</form>
 	</div>
 	<div class="card-footer">
-		<button class="btn btn-flat btn-primary" form="inventory-form">Save</button>
+		<button class="btn btn-flat btn-primary"  style="background-color: #08dca4; border-color: #08dca4;color:black"  form="inventory-form">Save</button>
 		<a class="btn btn-flat btn-default" href="?page=inventory">Cancel</a>
 	</div>
 </div>

@@ -10,27 +10,22 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 ?>
 <div class="card card-outline card-info">
 	<div class="card-header">
-		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Product</h3>
+		<!-- <h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Product</h3> -->
 	</div>
 	<div class="card-body">
 		<form action="" id="product-form">
 			<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
             <div class="form-group">
-				<label for="category_id" class="control-label">Category</label>
+				<!-- <label for="category_id" class="control-label">Category</label>
                 <select name="category_id" id="category_id" class="custom-select select2" required>
-                <option value=""></option>
-                <?php
-                    $qry = $conn->query("SELECT * FROM `categories` order by category asc");
-                    while($row= $qry->fetch_assoc()):
-                ?>
-                <option value="<?php echo $row['id'] ?>" <?php echo isset($category_id) && $category_id == $row['id'] ? 'selected' : '' ?>><?php echo $row['category'] ?></option>
-                <?php endwhile; ?>
-                </select>
+                <option value=""></option> -->
+                
+                
 			</div>
             <div class="form-group">
-				<label for="sub_category_id" class="control-label">Sub Category</label>
+				<!-- <label for="sub_category_id" class="control-label">Sub Category</label>
                 <select name="sub_category_id" id="sub_category_id" class="custom-select">
-                <option value="" selected="" disabled="">Select Category First</option>
+                <option value="" selected="" disabled="">Select Category First</option> -->
                 <?php
                     $qry = $conn->query("SELECT * FROM `sub_categories` order by sub_category asc");
                     $sub_categories = array();
@@ -41,7 +36,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </select>
 			</div>
 			<div class="form-group">
-				<label for="title" class="control-label">Menu Name</label>
+				<label for="title" class="control-label">Medicine Name</label>
                 <textarea name="title" id="" cols="30" rows="2" class="form-control form no-resize"><?php echo isset($title) ? $title : ''; ?></textarea>
 			</div>
             <div class="form-group">
@@ -87,7 +82,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 		</form>
 	</div>
 	<div class="card-footer">
-		<button class="btn btn-flat btn-primary" form="product-form">Save</button>
+		<button class="btn btn-flat btn-primary"  style="background-color: #08dca4; border-color: #08dca4;color:black" form="product-form">Save</button>
 		<a class="btn btn-flat btn-default" href="?page=product">Cancel</a>
 	</div>
 </div>

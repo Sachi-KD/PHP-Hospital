@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group d-flex justify-content-between">
                     <a href="javascript:void()" id="create_account">Create Account</a>
-                    <button class="btn btn-primary btn-flat">Login</button>
+                    <button class="btn btn-primary btn-flat" style="background-color: #08dca4; border-color: #08dca4;color:black;">Login</button>
                 </div>
             </form>
         </div>

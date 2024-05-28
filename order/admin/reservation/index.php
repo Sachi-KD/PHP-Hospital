@@ -7,10 +7,12 @@
 $date_start = isset($_GET['date_start']) ? $_GET['date_start'] :  date("Y-m-d",strtotime(date("Y-m-d")." -7 days")) ;
 $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
 ?>
-<div class="card card-primary card-outline">
+<div class="card  card-outline">
     <div class="card-header">
-        <h5 class="card-title">Ordered Medicine Report</h5>
+        <h5 class="card-title" style="font-weight: bold;">Ordered Medicine Report</h5>
     </div>
+
+
     <div class="card-body">
         <form id="filter-form">
             <div class="row align-items-end">
@@ -34,7 +36,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
         <div id="printable">
             <div>
                 <h4 class="text-center m-0"><?php echo $_settings->info('name') ?></h4>
-                <h3 class="text-center m-0"><b>Ordered Medicine Report</b></h3>
+                <h3 class="text-center m-0" style="font-weight: bold;">Ordered Medicine Report</h3>
                 <p class="text-center m-0">Date Between <?php echo $date_start ?> and <?php echo $date_end ?></p>
                 <hr>
             </div>
@@ -54,7 +56,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                         <th>Date Time</th>
                         <th>Client</th>
                         <th>Contact Information</th>
-                        <th>Event Schedule</th>
+                        <th>Delivery Date & Time</th>
                         <th>Amount</th>
                         <th>Status</th>
                     </tr>

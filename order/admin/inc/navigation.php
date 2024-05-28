@@ -2,10 +2,10 @@
 <!-- Main Sidebar Container -->
       <aside class="main-sidebar elevation-4 sidebar-no-expand">
         <!-- Brand Logo -->
-        <a href="<?php echo base_url ?>admin" class="brand-link bg-primary text-sm">
+        <!-- <a href="<?php echo base_url ?>admin" class="brand-link bg-primary text-sm">
         <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="brand-image img-circle elevation-3" style="opacity: .8;width: 2.5rem;height: 2.5rem;max-height: unset">
         <span class="brand-text font-weight-light"><?php echo $_settings->info('short_name') ?></span>
-        </a>
+        </a> -->
         <!-- Sidebar -->
         <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-transition os-host-scrollbar-horizontal-hidden">
           <div class="os-resize-observer-host observed">
@@ -21,14 +21,16 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="clearfix"></div>
                 <!-- Sidebar Menu -->
-                <nav class="mt-4">
+
+
+                <nav class="mt-1">
                    <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-compact nav-flat nav-child-indent nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
                     
                    <li class="nav-item dropdown">
                       <a href="./" class="nav-link nav-home">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                          Dashboard
+                        <i class="nav-icon fas fa-user"></i>
+                        <p style="font-weight: bold;font-size: 18px;">
+                          Make Admin
                         </p>
                       </a>
                     </li> 
@@ -37,7 +39,7 @@
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=product" class="nav-link nav-product">
                       <i class="nav-icon fas fa-list"></i>
-                        <p>
+                        <p style="font-weight: bold;font-size: 18px;">
                           Medicine List
                         </p>
                       </a>
@@ -46,7 +48,7 @@
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=inventory" class="nav-link nav-inventory">
                         <i class="nav-icon fas fa-tags"></i>
-                        <p>
+                        <p style="font-weight: bold;font-size: 18px;">
                           Medicine Pricing List
                         </p>
                       </a>
@@ -55,7 +57,7 @@
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=orders" class="nav-link nav-orders">
                         <i class="nav-icon fas fa-list"></i>
-                        <p>
+                        <p style="font-weight: bold;font-size: 18px;">
                           Order List
                         </p>
                       </a>
@@ -63,8 +65,8 @@
 
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=reservation" class="nav-link nav-reservation">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p>
+                        <i class="nav-icon fas fa-hospital"></i>
+                        <p style="font-weight: bold;font-size: 18px;">
                           Oder Medicine Report
                         </p>
                       </a>
@@ -87,14 +89,14 @@
                         </p>
                       </a>
                     </li> -->
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=system_info" class="nav-link nav-system_info">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
                           Settings
                         </p>
                       </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

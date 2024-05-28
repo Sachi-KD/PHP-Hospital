@@ -3,11 +3,11 @@
 	alert_toast("<?php echo $_settings->flashdata('success') ?>",'success')
 </script>
 <?php endif;?>
-<div class="card card-outline card-primary">
+<div class="card card-outline ">
 	<div class="card-header">
-		<h3 class="card-title">List of Menu Type and Pricing</h3>
+		<h3 class="card-title" style="font-weight: bold;">List of Medicine Type and Pricing</h3>
 		<div class="card-tools">
-			<a href="?page=inventory/manage_type" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
+			<a href="?page=inventory/manage_type" class="btn btn-flat btn-primary" style="background-color: #00d9a5; border-color: #00d9a5; color: black;"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
 	</div>
 	<div class="card-body">

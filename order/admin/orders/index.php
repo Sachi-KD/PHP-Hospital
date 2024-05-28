@@ -8,9 +8,9 @@
 	alert_toast("<?php echo $_settings->flashdata('error') ?>",'error')
 </script>
 <?php endif;?>
-<div class="card card-outline card-primary">
+<div class="card card-outline">
 	<div class="card-header">
-		<h3 class="card-title">List of Resservations</h3>
+		<h3 class="card-title" style="font-weight: bold;">List of Orders</h3>
 		<!-- <div class="card-tools">
 			<a href="?page=order/manage_order" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
 		</div> -->

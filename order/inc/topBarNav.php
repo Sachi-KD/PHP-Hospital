@@ -12,12 +12,18 @@
                 <!-- <form class="form-inline" id="search-form">
                   <div class="input-group">
                     <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-success btn-sm m-0" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
-                    </div>
+                   
                   </div>
                 </form> -->
 
+
+
+                  <div class="ml-auto">
+                    <a href="./admin/login.php" class="btn btn-outline-success btn-sm" type="submit" id="button-addon2"><i class="fa fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+       
                 
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
