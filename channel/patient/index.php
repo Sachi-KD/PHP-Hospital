@@ -151,7 +151,7 @@
                     <td colspan="4" >
                         
                     <center>
-                    <table class="filter-container doctor-header patient-header" style="border: none;width:95%" border="0" >
+                    <table class="filter-container doctor-header patient-header" style="border: none;width:95%;height: 200px;" >
                     <tr>
                         <td >
                             <h3 style="color: white;">Welcome!</h3>
@@ -165,7 +165,7 @@
                             <h3>Channel a Doctor Here</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
-                                <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style="width:45%;">&nbsp;&nbsp;
+                                <!-- <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style="width:45%;">&nbsp;&nbsp; -->
                                 
                                 <?php
                                     echo '<datalist id="doctors">';
@@ -183,7 +183,7 @@
     ?>
                                 
                            
-                                <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <!-- <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;"> -->
                             
                             <br>
                             <br>
