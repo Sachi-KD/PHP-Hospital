@@ -1,145 +1,95 @@
+<h1 class="text-light">Welcome to <?php echo $_settings->info('name') ?></h1>
+<hr>
+<div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-light elevation-1"><i class="fas fa-utensils"></i></span>
 
-<?php
-require_once('config.php');
-?>
+              <div class="info-box-content">
+                <span class="info-box-text">Total Menu</span>
+                <span class="info-box-number">
+                  <?php 
+                    $inv = $conn->query("SELECT count(id) as total FROM inventory ")->fetch_assoc()['total'];
+                    echo number_format($inv);
+                  ?>
+                  <?php ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-th-list"></i></span>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Form</title>
-    <link rel="stylesheet" href="path/to/your/css/file.css"> <!-- Link to your external CSS file if any -->
-    <style>
-        /* Internal CSS to center the form and set background color */
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-color: white; /* Set background color to white */
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 800px;
-        }
-        .form-container {
-            width: 100%;
-            max-width: 1000px; /* Adjust the max-width as needed */
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-    </style>
-</head>
-<body>
+              <div class="info-box-content">
+                <span class="info-box-text">Waiting fo Confirmation</span>
+                <span class="info-box-number">
+                  <?php 
+                    $pending = $conn->query("SELECT count(id) as total FROM `orders` where status = '0' ")->fetch_assoc()['total'];
+                    echo number_format($pending);
+                  ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
 
-<div>
-<?php
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
 
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-day"></i></span>
 
-
-?>
+              <div class="info-box-content">
+                <span class="info-box-text">Total Upcoming</span>
+                <span class="info-box-number">
+                <?php 
+                    $upcomming = $conn->query("SELECT count(id) as total FROM `orders` where status = '1' and unix_timestamp(event_date) >= '".strtotime(date('Y-m-d H:i'))."'  ")->fetch_assoc()['total'];
+                    echo number_format($upcomming);
+                  ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+        </div>
+<div class="container">
+  <?php 
+    $files = array();
+    $products = $conn->query("SELECT * FROM `products` order by rand() ");
+    while($row = $products->fetch_assoc()){
+      if(!is_dir(base_app.'uploads/product_'.$row['id']))
+      continue;
+      $fopen = scandir(base_app.'uploads/product_'.$row['id']);
+      foreach($fopen as $fname){
+        if(in_array($fname,array('.','..')))
+          continue;
+        $files[]= validate_image('uploads/product_'.$row['id'].'/'.$fname);
+      }
+    }
+  ?>
+  <div id="tourCarousel"  class="carousel slide" data-ride="carousel" data-interval="3000">
+      <div class="carousel-inner h-100">
+          <?php foreach($files as $k => $img): ?>
+          <div class="carousel-item  h-100 <?php echo $k == 0? 'active': '' ?>">
+              <img class="d-block w-100  h-100" style="object-fit:contain" src="<?php echo $img ?>" alt="">
+          </div>
+          <?php endforeach; ?>
+      </div>
+      <a class="carousel-control-prev" href="#tourCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#tourCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
 </div>
-
-
-<div class="container" style="margin-top:-150px;">
-    <div class="form-container">
-        <form action="home.php" method="post">
-            <div class="form-row">
-
-               
-
-            </div>
-            <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" id="firstname"  name="firstname" placeholder="First Name" style="background-color: #fff;color:black;" required>
-            </div>
-
-            <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" style="background-color: #fff;color:black;" required>
-            </div>
-
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" id="username" name="username"   placeholder="Username" style="background-color: #fff;color:black;" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" id="password"  name="password"  placeholder="password" style="background-color: #fff;color:black;" required>
-                </div>
-
-
-                 <div class="form-group col-md-12" style="text-align: left;">
-                    <button type="submit" id="register"  class="btn btn-primary" style="background-color: #00d9a5; border-color: #00d9a5; color: black; margin-top: 30px; width: 250px;color:black;" name="create">Register</button>
-                </div>
-            </div>
-             
-                
-        </form>
-    </div>
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="text/javascript">
- $(function(){
-
-     $('#register').click(function(e){
-
-         var valid = this.form.checkValidity(); 
-
-         
-         if(valid){
-
-         var firstname =  $('#firstname').val();
-         var lastname  =  $('#lastname').val();
-         var username  =  $('#username').val();
-         var password  =  $('#password').val();
-
-            e.preventDefault();
-
-            $.ajax({
-                type:'POST',
-                url :'process.php',
-                data:{firstname:firstname,lastname:lastname,username:username,password:password},
-                success:function(data){
-
-                    Swal.fire({
-                    title: "Successfully Done!",
-                    text: data,
-                    icon: "success"
-                     });
-
-                },
-                error:function(data){
-
-                    Swal.fire({
-                    title: "Error!",
-                    text: "Error while saving",
-                    icon: "error"
-                     });
-
-                }
-            });
-
-           
-         }else{
-           
-         }
-
-         
-
-
-     });
-
- 
-
- });
-
-</script>
-</body>
-</html>

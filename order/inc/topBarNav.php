@@ -3,8 +3,10 @@
                 <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <a class="navbar-brand" href="./">
                 <div style="text-align: right;">
-                <img src="<?php echo validate_image($_settings->info('logo')) ?>" width="290" height="40" class="d-inline-block align-top" alt="" loading="lazy" style="margin-left: 150px;">
+                <a href="../index/index.php">
+                <img src="<?php echo validate_image($_settings->info('logo')) ?>" width="290" height="40" class="d-inline-block align-top" alt="" loading="lazy" style="margin-left: -200px;">
                 </div>
+                </a>
                 <!-- <?php echo $_settings->info('short_name') ?> -->
                 </a>
          
@@ -18,7 +20,7 @@
 
 
 
-                  <div class="ml-auto">
+                <div class="d-flex align-items-center move-left">
                     <a href="./admin/login.php" class="btn btn-outline-success btn-sm" type="submit" id="button-addon2"><i class="fa fa-user"></i></a>
                 </div>
             </div>

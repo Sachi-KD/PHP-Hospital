@@ -20,6 +20,12 @@ $total = 0;
                             <label for="" class="control-label">Contact number</label>
                             <input type="text" name="event" class="form-control">
                         </div>
+
+                        <!-- <div class="form-group col">
+                            <label for="" class="control-label">Town</label>
+                            <input type="text" name="event" class="form-control">
+                        </div> -->
+
                         <div class="form-group col address-holder">
                             <label for="" class="control-label">Delivery Address</label>
                             <textarea id="" cols="30" rows="3" name="venue" class="form-control" style="resize:none"></textarea>

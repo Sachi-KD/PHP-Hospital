@@ -73,7 +73,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                         <td><?php echo $row['client'] ?></td>
                         <td><?php echo $row['event'] ?></td>
                         <td><?php echo $row['event_date'] ?></td>
-                        <td class="text-right"><?php echo number_format($row['amount'] * $row['additional_amount']) ?></td>
+                        <td class="text-center"><?php echo $i++ ?></td>
                         <td class="text-center">
                                 <?php if($row['status'] == 0): ?>
                                     <span class="badge badge-light">Pending</span>

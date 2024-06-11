@@ -49,7 +49,7 @@
               <a class="nav-link" href="contact.php">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-2" href="../order"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a class="btn btn-primary ml-lg-2" href="../order/"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
           </ul>
         </div> <!-- .navbar-collapse -->

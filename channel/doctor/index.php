@@ -198,7 +198,7 @@
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $doctorrow->num_rows  ?>
                                                                 </div><br>
-                                                                <div class="h3-dashboard">
+                                                                <div class="h3-dashboard" style="color: black;">
                                                                     All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
@@ -213,7 +213,7 @@
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $patientrow->num_rows  ?>
                                                                 </div><br>
-                                                                <div class="h3-dashboard">
+                                                                <div class="h3-dashboard" style="color: black;">
                                                                     All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
@@ -228,7 +228,7 @@
                                                                 <div class="h1-dashboard" >
                                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                                 </div><br>
-                                                                <div class="h3-dashboard" >
+                                                                <div class="h3-dashboard" style="color: black;">
                                                                     NewBooking &nbsp;&nbsp;
                                                                 </div>
                                                         </div>
@@ -243,7 +243,7 @@
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $schedulerow ->num_rows  ?>
                                                                 </div><br>
-                                                                <div class="h3-dashboard" style="font-size: 15px">
+                                                                <div class="h3-dashboard" style="color: black;">
                                                                     Today Sessions
                                                                 </div>
                                                         </div>
